@@ -10,9 +10,27 @@ const movies = [
   { title: 'Ex Machina' }
 ];
 
+class Searchbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = '';
+  }
+
+  render() {
+    return (
+      <form>
+        <label>
+          <input type="text" name="search" placeholder="Enter a movie title"/>
+        </label>
+        <button>Search</button>
+      </form>
+    );
+  }
+}
+
 function MovieList(props) {
-  const movies = props.movies;
-  const listItems = movies.map((movie) => 
+  var movies = props.movies;
+  var listItems = movies.map((movie) => 
     <li>{movie.title}</li>
   );
   return (
@@ -27,10 +45,12 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to Movielist</h1>
+          <h3><em>How may I take your order?</em></h3>
         </header>
         <p className="App-intro">
-          To get started, edit Guisak John Pricehoun and save to reload.
+          To get started, edit <code>Guisak John Pricehoun</code> and save to reload.
         </p>
+        <Searchbar />
         <MovieList movies={movies} />
       </div>
     );

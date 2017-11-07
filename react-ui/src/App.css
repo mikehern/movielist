@@ -8,18 +8,24 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #006bb6;
+  height: 250px;
   padding: 20px;
-  color: white;
+  color: #fff;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 3 rem;
 }
 
 .App-intro {
   font-size: large;
+  color:#006bb6;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 @keyframes App-logo-spin {
